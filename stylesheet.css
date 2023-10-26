@@ -1,0 +1,136 @@
+body {
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#top-bar {
+    background-color: lightblue;
+    width: 100%;
+    height: 128px;
+    text-align: center;
+    font-size: 60px;
+    position: fixed;
+    margin-top: -128px;
+    position: fixed;
+}
+
+.main   {
+    max-width: 800px;
+    margin: auto;
+    padding: 10px;
+}
+
+#short {background-color: lightcyan;}
+
+#impr {background-color: lightcyan;}
+
+#stop {background-color: lightcyan;}
+
+#kont {background-color: lightcyan;}
+
+    #kont {
+        display: block;
+        text-align: center;
+}
+
+#navigation-bar {
+    line-height: 0%;
+}
+
+#navigation-bar img:hover {
+    scale: 110%;
+}
+
+#top {
+    margin-top: 128px;
+}
+
+#footer {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    text-decoration: underline;
+}
+
+#plattform-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#impr-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inhalt {
+    margin-left: 2.4%;
+    margin-right: 2.4%;
+    margin-bottom: 5%;
+    scroll-margin-top: 128px;
+    align-items: center;
+}
+
+#links {
+    display: block;
+    text-align: center;
+}
+
+#navigation {
+    line-height: 0%;
+    position: fixed; left: 2%; top: 20%;
+}
+
+#navigation a {
+    color: black;
+    display: inline-block;
+    width: 196px;   
+    background-color: rgb(100, 203, 238);
+    font-size: 32px;
+    padding:24px;
+    padding-left: 12px;
+    padding-right: 5px;
+    margin-top: 8px;
+    margin: -3px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navigation a:hover {
+    color: black;
+    background-color: rgb(0, 191, 255);
+    padding-right: 12px;
+}
+
+#image2 img {
+    max-width: 761.2px;
+}
+
+#image3 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 128px;
+}
+
+#image3 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#image4 img{
+    size: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Impressum {
+    margin-bottom: 128px;
+}

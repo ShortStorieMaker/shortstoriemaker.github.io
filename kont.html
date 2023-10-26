@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="shortcut icon" href="JookoProfilePic.jpeg" type="image/x-icon">
+        <title>Short Storie Maker</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="top-bar">
+            Kontakt
+            <section id="navigation-bar">
+                <a href="index.html"><img src="Short.png"></a>
+                <a href="jokko.html"><img src="Jokko.png"></a>
+                <a href="stop.html"><img src="Stop.png"></a>
+                <a href="impr.html"><img src="impr.png"></a>
+                <a href="kont.html"><img src="kont.png"></a>
+            </section>
+        </div>
+        <section id="navigation" class="navigation">
+            <p><a href="#kontakt">Kontakt</a></p>
+            <p><a href="#support">Support</a></p>
+        </section>
+        <div id="top"></div>
+        <div class="main" id="kont">
+            <section id="kontakt" class="inhalt">
+                <h2>ShortStorieMaker</h2>
+                <div style="margin-bottom: 64px;">
+                    <div id="image3"><a href="mailto:shortstoriemaker@gmail.com"><img src="image.jpg" alt="Logo von ShortStorieMaker"></a></div>
+                    <p>shortstoriemaker@gmail.com</p>
+                </div>
+            </section>
+            <section id="inhalt1" class="inhalt">
+                <h2>Jokko Animation Studios</h2>
+                <div style="margin-bottom: 128px;">
+                    <div id="image3"><a href="mailto:jokko@mail.de"><img src="JookoProfilePic.jpeg" alt="Logo von JokkoAnimationStudios"></a></div>
+                    <p>jokko@mail.de</p>
+                </div>
+            </section>
+            <section id="support" class="inhalt">
+                <h2>Support</h2>
+                <div style="margin-bottom: 128px;">
+                    <p style="text-align: center;">Fragen oder Anregungen? Schreibe uns eine Nachricht</p>
+                <form id="feedbackform" action="https://discord.com/api/webhooks/1164143877872168990/p2vPGxzGO2NGkL-wtuIiWpqeJZ-f62wh0tfSIxyPQ3HeR0fTotXa25YUHEFNaGAtboLs" method=post>
+                    <textarea id="feedback" name="feedback" rows=10 cols=100px wrap="soft" maxlength="1000"></textarea>
+                    <input type=submit value="Abschicken">
+                    <input type=reset value="Löschen">
+                </form>
+                </div>
+            </section>
+        </div>
+        <div id="footer">
+            Copyright 2023 | ShortStorieMaker
+        </div>
+    </body>
+</html>
+<script>
+    // Die URL deines Discord-Webhooks
+    const webhookUrl = 'https://discord.com/api/webhooks/1164143877872168990/p2vPGxzGO2NGkL-wtuIiWpqeJZ-f62wh0tfSIxyPQ3HeR0fTotXa25YUHEFNaGAtboLs';
+
+    // Warte auf das Absenden des Formulars
+    document.getElementById('feedbackform').addEventListener('submit', function(e) {
+        e.preventDefault(); // Verhindert das Standardverhalten des Formulars
+
+        // Nachricht aus dem Textfeld abrufen
+        const feedback = document.getElementById('feedback').value;
+
+        // JSON-Daten erstellen, um an den Webhook zu senden
+        const data = {
+            content: "Hey, you got a new Feedback!",
+            embeds: [
+                {
+                    title: "Feedback",
+                    description: feedback,
+                    color: 15871
+                }
+            ],
+            username: "Feedback-Bogen",
+            avatar_url: "https://cdn.discordapp.com/attachments/1063926686426599535/1164146162878664725/JookoProfilePic.jpeg?ex=6542269a&is=652fb19a&hm=ac9f98f7fae3a8d0e9ba8bd9c2a449f1b131c9594a9eeaf580852bc1d26c1aba",
+            attachments: []
+        };
+
+        // Nachricht an den Discord-Webhook senden
+        fetch(webhookUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Nachricht erfolgreich an Discord gesendet');
+            } else {
+                alert('Fehler beim Senden der Nachricht an Discord');
+            }
+        })
+        .catch(error => {
+            console.error('Fehler:', error);
+        });
+    });
+</script>
